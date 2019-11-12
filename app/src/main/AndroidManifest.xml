@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CadMembro"></activity>
+        <activity android:name=".Cliente"></activity>
+        <activity android:name=".CadCliente" />
+        <activity android:name=".CadMembro" />
         <activity android:name=".Membro" />
         <activity android:name=".MainActivity">
             <intent-filter>
