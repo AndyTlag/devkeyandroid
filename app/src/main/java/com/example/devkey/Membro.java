@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class Membro extends AppCompatActivity {
 
-    Button btn_cad_mb;
+    FloatingActionButton btn_cad_mb;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +21,7 @@ public class Membro extends AppCompatActivity {
     }
 
     public void inicializarObjetos(){
-        btn_cad_mb = (Button) findViewById(R.id.btn_cad_mb);
+        btn_cad_mb =  (FloatingActionButton)findViewById(R.id.btn_cad_mb);
         abrirActivityCadMb();
     }
 
@@ -29,7 +31,8 @@ public class Membro extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent = new Intent();
                 intent.setClass(Membro.this, CadMembro.class);
+                startActivity(intent);
             }
-        })
+        });
     }
 }

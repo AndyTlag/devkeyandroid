@@ -7,9 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class Cliente extends AppCompatActivity {
 
-    Button btn_cad_cli;
+    FloatingActionButton btn_cad_cli;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +21,7 @@ public class Cliente extends AppCompatActivity {
     }
 
     public void inicializarObjetos(){
-        btn_cad_cli = (Button) findViewById(R.id.btn_cad_mb);
+        btn_cad_cli = (FloatingActionButton) findViewById(R.id.btn_cad_cli);
         abrirActivityCadMb();
     }
 
@@ -29,7 +31,8 @@ public class Cliente extends AppCompatActivity {
             public void onClick(View v){
                 Intent intent = new Intent();
                 intent.setClass(Cliente.this, CadCliente.class);
+                startActivity(intent);
             }
-        })
+        });
     }
 }
