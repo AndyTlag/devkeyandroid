@@ -8,7 +8,7 @@ package com.example.devkey;
 
 public class SplashDevMedia extends Activity {
     // Timer da splash screen
-    private static int SPLASH_TIME_OUT = 3000;
+    private static int SPLASH_TIME_OUT = 6000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
