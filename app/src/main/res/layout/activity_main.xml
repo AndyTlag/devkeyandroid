@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="20dp"
-    android:paddingRight="20dp"
-    android:orientation="vertical" >
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imgvw1"
+        android:layout_width="match_parent"
+        android:layout_height="739dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/banner_sigin" />
+
 
     <Button
-        android:id="@+id/btn_membro"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:background="@color/colorBtn"
-        android:text="Membro" />
+    android:id="@+id/btn_membro"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="right"
+    android:background="@color/colorBtn"
+    android:text="Membro" />
 
     <Button
         android:id="@+id/btn_cliente"
@@ -22,4 +29,5 @@
         android:background="@color/colorBtn"
         android:text="Cliente" />
 
-</LinearLayout>
+</FrameLayout>
+

@@ -4,13 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadCliente">
+    tools:context=".CadMembro">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="297dp"
+        android:layout_height="36dp"
+        android:text="Nome Empresa"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="35dp" />
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="297dp"
+        android:layout_height="36dp"
+        android:text="Nome Chefe"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="92dp" />
+
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CadCliente"
-        tools:layout_editor_absoluteX="179dp"
-        tools:layout_editor_absoluteY="189dp" />
+        android:layout_width="297dp"
+        android:layout_height="36dp"
+        android:text="E-Mail"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="152dp" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="297dp"
+        android:layout_height="36dp"
+        android:text="Celular"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="207dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="297dp"
+        android:layout_height="36dp"
+        android:text="CEP"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="271dp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="297dp"
+        android:layout_height="36dp"
+        android:text="Endereco"
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="331dp" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="297dp"
+        android:layout_height="36dp"
+        android:text="Cidade"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="394dp" />
+
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="297dp"
+        android:layout_height="36dp"
+        android:text="Membro Responsável"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="454dp" />
+
+    <Button
+        android:id="@+id/btn_ir_mb"
+        android:layout_width="300dp"
+        android:layout_height="46dp"
+        android:text="Cadastrar Cliente"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="541dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
