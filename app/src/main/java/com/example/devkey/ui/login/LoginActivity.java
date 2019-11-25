@@ -5,6 +5,7 @@ import android.app.Activity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -22,6 +23,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.devkey.MainActivity;
 import com.example.devkey.R;
 import com.example.devkey.ui.login.LoginViewModel;
 import com.example.devkey.ui.login.LoginViewModelFactory;
@@ -29,6 +31,8 @@ import android.app.Activity;
 import android.os.Bundle;
 
 public class LoginActivity extends AppCompatActivity {
+
+    Button btn_login;
 
     private LoginViewModel loginViewModel;
 
@@ -38,6 +42,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
+        inicializarObjetos();
 
         final EditText usernameEditText = findViewById(R.id.username);
         final EditText passwordEditText = findViewById(R.id.password);
@@ -121,6 +126,36 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
 
+
+
+
+
+
+
+    public void inicializarObjetos(){
+
+        btn_login = (Button) findViewById(R.id.btn_login);
+        abrirMainActivity();
+    }
+
+    public void abrirMainActivity](){
+        btn_login.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent();
+                intent.setClass(LoginActivity.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+
+
+
+
+
+
+
     private void updateUiWithUser(LoggedInUserView model) {
         String welcome = getString(R.string.welcome) + model.getDisplayName();
         // TODO : initiate successful logged in experience
@@ -130,4 +165,5 @@ public class LoginActivity extends AppCompatActivity {
     private void showLoginFailed(@StringRes Integer errorString) {
         Toast.makeText(getApplicationContext(), errorString, Toast.LENGTH_SHORT).show();
     }
+
 }
